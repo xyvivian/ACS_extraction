@@ -1,5 +1,5 @@
 CREATE TABLE xueying_ding_acs.acs_result_table (
-	`Geography` VARCHAR(135) NOT NULL, 
+	`Block Group` VARCHAR(135) NOT NULL, 
 	`Age: 20-30` DECIMAL(38, 0) NOT NULL, 
 	`Age: 30-45` DECIMAL(38, 0) NOT NULL, 
 	`Age: 45-60` DECIMAL(38, 0) NOT NULL, 

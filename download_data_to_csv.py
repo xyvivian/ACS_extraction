@@ -12,7 +12,7 @@ import pandas as pd
 pd.set_option('display.expand_frame_repr',False)
 pd.set_option('display.precision' ,2)
 
-key= "dfc2beca03d588fa2aa4f4e1ca492c53feca4bf6"
+key= None  #Specify your own key here!!!!
 
 
 #From the observations above, all county codes are:
