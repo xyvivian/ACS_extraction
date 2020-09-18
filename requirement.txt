@@ -33,10 +33,7 @@ jinja2==2.11.2
 jsonschema==3.2.0
 leather==0.3.3
 numpy==1.19.1
-numpy-base==1.19.1
 openpyxl==3.0.5
-openssl==1.1.1g
-packaging==20.4
 pandas==1.1.1
 pandoc==2.10.1
 pandocfilters==1.4.2
