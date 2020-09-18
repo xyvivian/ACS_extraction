@@ -9,7 +9,6 @@ argon2-cffi==20.1.0
 attrs==20.1.0
 babel==2.8.0
 backcall==0.2.0
-blas==1.0
 bleach==3.1.5
 ca-certificates==2020.7.22
 censusdata==1.8
