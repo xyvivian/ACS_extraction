@@ -1,0 +1,1 @@
+csvsql --dialect mysql --snifflimit 100000 result.csv > create_table.sql
