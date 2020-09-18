@@ -11,10 +11,10 @@ pip install -r requirement.txt
 
 Additionally, need to specify the hose names, user names, passwords, and repo names by:
 ```
-export PGHOST= pghost
-export PGUSER = pguser
-export PGPASSWORD = pgpssword
-export PGDATABASE = pg database
+export PGHOST=pghost
+export PGUSER=pguser
+export PGPASSWORD=pgpssword
+export PGDATABASE=pgdatabase
 ```
 
 ## ACE Database Loading
