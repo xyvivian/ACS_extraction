@@ -32,7 +32,6 @@ jellyfish==0.6.1
 jinja2==2.11.2
 jsonschema==3.2.0
 leather==0.3.3
-libedit==3.1.20191231
 libffi==3.3
 libgcc-ng==9.1.0
 libpng==1.6.37
