@@ -28,13 +28,9 @@ ipywidgets==7.5.1
 isodate==0.6.0
 jdcal==1.4.1
 jedi==0.17.2
+jellyfish==0.6.1
 jinja2==2.11.2
-jpeg==9b
 jsonschema==3.2.0
-jupyter==1.0.0
-jupyter_client==6.1.6
-jupyter_console==6.2.0
-jupyter_core==4.6.3
 ld_impl_linux-64==2.33.1
 leather==0.3.3
 libedit==3.1.20191231
