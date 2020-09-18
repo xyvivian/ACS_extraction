@@ -2,7 +2,7 @@ SET ROLE xding2;
 
 CREATE SCHEMA IF NOT EXISTS xueying_ding_acs;
 
-CREATE TABLE IF EXISTS acs_result_table;
+DROP TABLE IF EXISTS acs_result_table;
 
 \i create_table.sql
 
