@@ -53,7 +53,6 @@ python-slugify==4.0.1
 pytimeparse==1.1.8
 pytz==2020.1
 pyzmq==19.0.1
-qt==5.9.7
 qtconsole==4.7.6
 qtpy==1.9.0
 readline==8.0
