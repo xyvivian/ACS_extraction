@@ -16,7 +16,6 @@ cffi==1.14.2
 chardet==3.0.4
 csvkit==1.0.5
 dbfread==2.0.7
-dbus==1.13.16
 decorator==4.4.2
 defusedxml==0.6.0
 entrypoints==0.3
