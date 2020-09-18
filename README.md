@@ -6,7 +6,7 @@ To set up the required evnironment:
 ```
 virtualenv -p python3 env
 source env/bin/activate
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 
 Additionally, need to specify the hose names, user names, passwords, and repo names by:
