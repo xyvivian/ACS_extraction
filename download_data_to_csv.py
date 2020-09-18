@@ -8,14 +8,11 @@ import censusdata
 import pandas as pd
 
 
-# In[2]:
-
 
 pd.set_option('display.expand_frame_repr',False)
 pd.set_option('display.precision' ,2)
 
-
-# In[3]:
+key= "dfc2beca03d588fa2aa4f4e1ca492c53feca4bf6"
 
 
 #From the observations above, all county codes are:
@@ -24,8 +21,6 @@ county_list = ['091','123','133','031','007','009','019','067','069','089','103'
 '107','125','081','075','003','127','073','079','033','053','129','057','045','097','131','065','049','093','041','001',
 '015','085','115','017','113','011','087']
 
-
-# In[4]:
 
 
 #download the census data for percentage of age
@@ -51,10 +46,9 @@ age_sex_data = censusdata.download('acs5', 2018,
                                                         'B01001_042E','B01001_043E',
                                                         'B01001_044E','B01001_045E',
                                                         'B01001_046E','B01001_047E',
-                                                        'B01001_048E','B01001_049E'])
+                                                        'B01001_048E','B01001_049E'],
+                                                        key=key)
 
-
-# In[5]:
 
 
 for i in county_list[1:]:
@@ -80,11 +74,10 @@ for i in county_list[1:]:
                                                         'B01001_042E','B01001_043E',
                                                         'B01001_044E','B01001_045E',
                                                         'B01001_046E','B01001_047E',
-                                                        'B01001_048E','B01001_049E'])
+                                                        'B01001_048E','B01001_049E'],
+                                                        key= key)
     age_sex_data = age_sex_data.append(age_sex_data_new)
 
-
-# In[ ]:
 
 
 #here I divide the data into several categories
@@ -121,7 +114,7 @@ race_data = censusdata.download('acs5', 2018,
            censusdata.censusgeo([('state', '12'),
                                  ('county', '091'),
                                  ('block group', '*')]),['B02001_002E','B02001_003E','B02001_004E','B02001_005E',
-                                                         'B02001_006E'])
+                                                         'B02001_006E'],key=key)
 
 
 # In[ ]:
@@ -132,7 +125,7 @@ for i in county_list[1:]:
             censusdata.censusgeo([('state', '12'),
                                  ('county', i),
                                  ('block group', '*')]),['B02001_002E','B02001_003E','B02001_004E','B02001_005E',
-                                                         'B02001_006E'])
+                                                         'B02001_006E'],key=key)
     race_data = race_data.append(race_data_new)
 
 
@@ -155,7 +148,7 @@ education_data = censusdata.download('acs5', 2018,
            censusdata.censusgeo([('state', '12'),
                                  ('county', '091'),
                                  ('block group', '*')]),['B29002_002E','B29002_003E','B29002_004E','B29002_005E',
-                                                         'B29002_006E','B29002_007E','B29002_008E'])
+                                                         'B29002_006E','B29002_007E','B29002_008E'], key=key)
 
 
 # In[ ]:
@@ -166,7 +159,7 @@ for i in county_list[1:]:
            censusdata.censusgeo([('state', '12'),
                                  ('county', i),
                                  ('block group', '*')]),['B29002_002E','B29002_003E','B29002_004E','B29002_005E',
-                                                         'B29002_006E','B29002_007E','B29002_008E'])
+                                                         'B29002_006E','B29002_007E','B29002_008E'],key=key)
     education_data = education_data.append(edu_data_new)
 
 
@@ -194,7 +187,7 @@ employment_data = censusdata.download('acs5', 2018,
            censusdata.censusgeo([('state', '12'),
                                  ('county', '091'),
                                  ('block group', '*')]),['B23025_001E','B23025_002E','B23025_003E','B23025_004E',
-                                                         'B23025_005E','B23025_006E','B23025_007E'])
+                                                         'B23025_005E','B23025_006E','B23025_007E'], key= key)
 
 
 # In[ ]:
@@ -205,7 +198,7 @@ for i in county_list[1:]:
            censusdata.censusgeo([('state', '12'),
                                  ('county', i),
                                  ('block group', '*')]),['B23025_001E','B23025_002E','B23025_003E','B23025_004E',
-                                                         'B23025_005E','B23025_006E','B23025_007E'])
+                                                         'B23025_005E','B23025_006E','B23025_007E'], key=key)
     employment_data = employment_data.append(employment_data_new)
 
 
@@ -226,7 +219,8 @@ health_ins_data = censusdata.download('acs5', 2018,
                                  ('county', '091'),
                                  ('block group', '*')]),['B27010_003E','B27010_010E','B27010_017E','B27010_019E',
                                                          'B27010_026E','B27010_033E','B27010_035E','B27010_042E',
-                                                         'B27010_050E','B27010_052E','B27010_058E','B27010_066E'])
+                                                         'B27010_050E','B27010_052E','B27010_058E','B27010_066E'],
+                                      key = key)
 
 
 # In[ ]:
@@ -238,7 +232,8 @@ for i in county_list[1:]:
                                  ('county', i),
                                  ('block group', '*')]),['B27010_003E','B27010_010E','B27010_017E','B27010_019E',
                                                          'B27010_026E','B27010_033E','B27010_035E','B27010_042E',
-                                                         'B27010_050E','B27010_052E','B27010_058E','B27010_066E'])
+                                                         'B27010_050E','B27010_052E','B27010_058E','B27010_066E'],
+                                          key= key)
     health_ins_data = health_ins_data.append(health_data_new)
 
 
@@ -258,7 +253,7 @@ income_data = censusdata.download('acs5', 2018,
            censusdata.censusgeo([('state', '12'),
                                  ('county', '091'),
                                  ('block group', '*')]),['B28004_002E','B28004_006E','B28004_010E','B28004_014E',
-                                                         'B28004_018E','B28004_022E'])
+                                                         'B28004_018E','B28004_022E'],key = key)
 
 
 # In[ ]:
@@ -268,7 +263,7 @@ for i in county_list[1:]:
     income_data_new = censusdata.download('acs5', 2018,
            censusdata.censusgeo([('state', '12'),
                                  ('county', i), ('block group', '*')]),['B28004_002E','B28004_006E','B28004_010E','B28004_014E',
-                                                         'B28004_018E','B28004_022E'])
+                                                         'B28004_018E','B28004_022E'],key=key)
     income_data = income_data.append(income_data_new)
 
 
