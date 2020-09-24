@@ -6,4 +6,4 @@ DROP TABLE IF EXISTS xueying_ding_acs.acs_result_table;
 
 \i create_table.sql
 
-\COPY xueying_ding_acs.acs_result_table from 'result.csv' WITH CSV HEADER;
+\COPY xueying_ding_acs.acs_result_table from 'ACS_data.csv' WITH CSV HEADER;
